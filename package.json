@@ -1,0 +1,6 @@
+{
+  "name"    : "logic_edit",
+  "productName": "Logic+ Schematic Editor"
+  "version" : "0.1.0",
+  "main"    : "main.js"
+}

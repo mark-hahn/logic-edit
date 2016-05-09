@@ -8,21 +8,25 @@ var paper = new joint.dia.Paper({
 });
 
 var and = new joint.shapes.logicp.And({
-  size: { width: 90, height: 60 },
+  size: { width: 100, height: 50 },
   inPorts: ['in1','in2'],
   outPorts: ['out1'],
 });
 
-// var or = new joint.shapes.logicp.Or({
-//   size: { width: 30, height: 30 },
-// });
-//
-// var not = new joint.shapes.logicp.Not();
+var or = new joint.shapes.logicp.Or({
+  size: { width: 100, height: 50 },
+  inPorts: ['in1','in2'],
+  outPorts: ['out1'],
+});
 
-graph.addCell(and);
+var not = new joint.shapes.logicp.Not({
+  size: { width: 100, height: 50 },
+  inPorts: ['in1'],
+  outPorts: ['out1'],
+});
 
-// graph.addCells([and, or, not]);
-//
+graph.addCells([and, or, not]);
+
 and.position(50,50);
-// or.position(50,100);
-// not.position(50,150);
+or.position(50,150);
+not.position(50,250);

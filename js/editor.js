@@ -13,6 +13,6 @@ var Or = makeLogicpSym(graph, 'Or4', 250,   0);
 var Or = makeLogicpSym(graph, 'Or5', 350,   0);
 var Or = makeLogicpSym(graph, 'Or6', 450,   0);
 var Or = makeLogicpSym(graph, 'Or7', 550,   0);
-var Or = makeLogicpSym(graph, 'Or16', 650,   0);
+var Or = makeLogicpSym(graph, 'Or32', 650,   0);
 // var or  = makeLogicpSym(graph, 'Or2',  50,  50);
 // var not = makeLogicpSym(graph, 'Not',  50, 100);

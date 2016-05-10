@@ -12,7 +12,7 @@ window.makeLogicpSym = (graph, name, x, y) => {
     let y = pitch/2;
     for (let i=0; i < info.inCount; i++, y += pitch) {
       let yInt = Math.round(y);
-      pinsHtml += `<line class="pin" x1="0" y1="${yInt}" x2="${pinLen+info.width/3}" y2="${yInt}"/>`;
+      pinsHtml += `<line class="pin" x1="0" y1="${yInt}" x2="${pinLen+info.width/3.5}" y2="${yInt}"/>`;
       if (!info.not)
         bubblesHtml += `<circle class="bubble bubbleIn${i}" cx="${pinLen-bubbleRadius}" cy="${yInt}" r="${bubbleRadius}"/>`;
     }
@@ -55,9 +55,10 @@ window.makeLogicpSym = (graph, name, x, y) => {
 
 makeAnd = (inCount) => {
   let hgt = (inCount+1) * 10;
+  let c = pinLen * 2.05 + (inCount * 2);
   return {
-    path:`M ${pinLen} 0 V ${hgt} C ${pinLen+32} ${hgt} ${pinLen+32} 0 ${pinLen} 0`,
-    inCount, outCount:1, width:25, height:hgt
+    path:`M ${pinLen} 0 V ${hgt} C ${c} ${hgt} ${c} 0 ${pinLen} 0`,
+    inCount, outCount:1, width:inCount*1.5+20, height:hgt
   }
 }
 
@@ -67,7 +68,7 @@ makeOr = (inCount) => {
   let c = 2.2*pinLen + (inCount * 5);
   return {
     path:`M ${pinLen-4} 0 Q ${q} ${hgt/2} ${pinLen-4} ${hgt} C ${c} ${hgt} ${c} 0 ${pinLen-4} 0`,
-           inCount, outCount:1, width:inCount*4+20, height:hgt
+           inCount, outCount:1, width:inCount*3.8+20, height:hgt
   }
 }
 
@@ -76,7 +77,7 @@ var classInfo = {
          inCount:1, outCount:1, width:25, height:30, not:true},
 }
 
-for (let i=2; i <= 16; i++) {
+for (let i=2; i <= 32; i++) {
   classInfo['And'+i] = makeAnd(i);
   classInfo['Or'+i] = makeOr(i);
 }

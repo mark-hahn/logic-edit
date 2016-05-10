@@ -73,8 +73,8 @@ makeOr = (inCount) => {
 }
 
 var classInfo = {
-  Not: { path:`M ${pinLen} 0 V 30 L ${pinLen+30} 15 L ${pinLen} 0`,
-         inCount:1, outCount:1, width:25, height:30, not:true},
+  Not: { path:`M ${pinLen} 0 V 25 L ${pinLen+25} 12.5 L ${pinLen} 0`,
+         inCount:1, outCount:1, width:22, height:25, not:true},
 }
 
 for (let i=2; i <= 32; i++) {

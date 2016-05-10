@@ -12,11 +12,50 @@
 
     <script src="js/setup.js"></script>
     <script src="js/menus.js"></script>
+    <style>
+      html { box-sizing: border-box; }
+      *, *:before, *:after { box-sizing: inherit; }
+      #page, html, body {
+        width: 100%;
+        height:100%;
+        margin:0;
+      }
+      #page {overflow: hidden;}
+      #paper {
+        width: 100%;
+        height: 100%;
+        /*display: flex;*/
+        /*flex-direction: row;*/
+      }
+      #left-col {
+        position:absolute;
+        z-index: -1;
+        left:0;
+        top:0;
+        width: 15%;
+        height: 100%;
+        border:1px solid black;
+      }
+      #edit-area {
+        position:fixed;
+        z-index: -1;
+        left:15%;
+        top:0;
+        width: 85%;
+        height: 100%;
+      }
+    </style>
   </head>
 
   <body>
-      <div id="paper"></div>
+    <div id="page">
+      <div id="paper">
+        <div id="left-col"></div>
+        <div id="edit-area"></div>
+      </div>
       <script src="js/built-in-symbols.js"></script>
       <script src="js/editor.js"></script>
+    </div>
   </body>
+
 </html>

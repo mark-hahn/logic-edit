@@ -7,12 +7,12 @@ var paper = new joint.dia.Paper({
   // width: 200, height: 200, gridSize: 5,
 });
 
-var and = makeLogicpSym(graph, 'And2', 50,   0);
-var and = makeLogicpSym(graph, 'And3', 150,   0);
-var and = makeLogicpSym(graph, 'And4', 250,   0);
-var and = makeLogicpSym(graph, 'And5', 350,   0);
-var and = makeLogicpSym(graph, 'And6', 450,   0);
-var and = makeLogicpSym(graph, 'And7', 550,   0);
-var and = makeLogicpSym(graph, 'And8', 650,   0);
+var Or = makeLogicpSym(graph, 'Or2', 50,   0);
+var Or = makeLogicpSym(graph, 'Or3', 150,   0);
+var Or = makeLogicpSym(graph, 'Or4', 250,   0);
+var Or = makeLogicpSym(graph, 'Or5', 350,   0);
+var Or = makeLogicpSym(graph, 'Or6', 450,   0);
+var Or = makeLogicpSym(graph, 'Or7', 550,   0);
+var Or = makeLogicpSym(graph, 'Or16', 650,   0);
 // var or  = makeLogicpSym(graph, 'Or2',  50,  50);
 // var not = makeLogicpSym(graph, 'Not',  50, 100);
